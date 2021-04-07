@@ -23,7 +23,7 @@ function plotRoom(setup)
     %% Mic & Speaker
     hold on
     mic = plot(setup.room.receivPos(1), setup.room.receivPos(2), '.', 'MarkerSize', 20); %Mic
-    speaker = plot(setup.room.sourcePos(1), setup.room.sourcePos(2), 'sr', 'MarkerSize', 15,'MarkerFaceColor','r'); %Speaker
+    speaker = plot(setup.room.sourcePos(1), setup.room.sourcePos(2), '.r', 'MarkerSize', 15); %Speaker
 
     legend([l, mic speaker], {'Wall', 'Mic', 'Speaker'});
     
