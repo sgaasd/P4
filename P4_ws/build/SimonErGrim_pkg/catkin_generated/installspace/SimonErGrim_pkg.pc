@@ -1,0 +1,8 @@
+prefix=/home/axel/P4/P4_ws/install
+
+Name: SimonErGrim_pkg
+Description: Description of SimonErGrim_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/axel/P4/P4_ws/install/lib 
+Requires: 
