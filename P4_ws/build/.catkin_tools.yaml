@@ -1,0 +1,6 @@
+devel_space: /home/axel/P4/P4_ws/devel
+install: false
+install_space: /home/axel/P4/P4_ws/install
+profile: default
+source_space: /home/axel/P4/P4_ws/src
+workspace: /home/axel/P4/P4_ws
