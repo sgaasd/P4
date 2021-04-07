@@ -721,10 +721,20 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>513 805000000</sim_time>
-      <real_time>515 41139563</real_time>
-      <wall_time>1617802028 76831263</wall_time>
-      <iterations>513805</iterations>
+      <sim_time>552 184000000</sim_time>
+      <real_time>38 510973608</real_time>
+      <wall_time>1617802458 505579684</wall_time>
+      <iterations>38379</iterations>
+      <model name='Dumpster'>
+        <pose frame=''>-1.05127 -1.53182 0.000917 0 2e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.05127 -1.53182 0.000917 0 2e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.006033 0 -1e-05 0 0.280676 -4e-06</acceleration>
+          <wrench>0.006033 0 -1e-05 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='House'>
         <pose frame=''>-0.705 -1.305 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -769,10 +779,65 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-9.28381 -14.9913 14.5188 0 0.679641 1.01218</pose>
+        <pose frame=''>-9.64289 -18.7861 11.6467 0 0.475641 1.01218</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <model name='Dumpster'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://dumpster/materials/scripts</uri>
+              <uri>model://dumpster/materials/textures</uri>
+              <name>Dumpster/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.05127 -1.53182 0 0 -0 0</pose>
+    </model>
   </world>
 </sdf>
